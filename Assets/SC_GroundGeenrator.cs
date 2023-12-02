@@ -90,22 +90,27 @@ public class SC_GroundGenerator : MonoBehaviour
 
     void OnGUI()
     {
+        GUIStyle startStyle = new GUIStyle();
+        GUIStyle scoreSize = new GUIStyle();
+        startStyle.fontSize = 100;
+        scoreSize.fontSize = 40;
+        
         if (gameOver)
         {
             GUI.color = Color.red;
-            GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 300, 300), "Game Over\nYour score is: " + ((int)score) + "\nPress 'Space' to restart");
+            GUI.Label(new Rect(Screen.width / 2 - 500, Screen.height / 2 - 200, 200, 200), "Game Over\nYour score is: " + ((int)score) + "\nPress 'Space' to restart", startStyle);
         }
         else
         {
             if (!gameStarted)
             {
                 GUI.color = Color.red;
-                GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 1400, 1400), "Press 'Space' to start");
+                GUI.Label(new Rect(Screen.width / 2 - 500, Screen.height / 2 - 200, 400, 400), "Press 'Space' to start", startStyle);
             }
         }
 
 
         GUI.color = Color.green;
-        GUI.Label(new Rect(5, 5, 200, 25), "Score: " + ((int)score));
+        GUI.Label(new Rect(5, 5, 200, 25), "Score: " + ((int)score), scoreSize);
     }
 }
