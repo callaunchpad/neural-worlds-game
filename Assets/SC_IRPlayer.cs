@@ -18,7 +18,7 @@ public class SC_IRPlayer : MonoBehaviour
     void Start()
     {
         r = GetComponent<Rigidbody>();
-        r.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+        r.constraints = RigidbodyConstraints.FreezePositionZ;
         r.freezeRotation = true;
         r.useGravity = false;
         defaultScale = transform.localScale;
@@ -42,6 +42,18 @@ public class SC_IRPlayer : MonoBehaviour
         {
             transform.localScale = Vector3.Lerp(transform.localScale, defaultScale, Time.deltaTime * 7);
         }
+
+
+        if (Input.GetKeyDown(KeyCode.A) && r.position.x > -2)
+        {
+            r.position = new Vector3(r.position.x - 2, r.position.y, r.position.z);
+        }
+
+        if (Input.GetKeyDown(KeyCode.D) && r.position.x < 2)
+        {
+            r.position = new Vector3(r.position.x + 2, r.position.y, r.position.z);
+        }
+
     }
 
     // Update is called once per frame

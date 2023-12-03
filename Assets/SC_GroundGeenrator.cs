@@ -55,7 +55,7 @@ public class SC_GroundGenerator : MonoBehaviour
         //Increase speed the higher score we get
         if (!gameOver && gameStarted)
         {
-            transform.Translate(-spawnedTiles[0].transform.forward * Time.deltaTime * (movingSpeed + (score / 500)), Space.World);
+            transform.Translate(-spawnedTiles[0].transform.forward * Time.deltaTime * (movingSpeed + (score / 100)), Space.World);
             score += Time.deltaTime * movingSpeed;
         }
 
