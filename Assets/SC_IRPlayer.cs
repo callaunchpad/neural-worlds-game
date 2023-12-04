@@ -44,7 +44,7 @@ public class SC_IRPlayer : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.A) && r.position.x > -2)
+        if (Input.GetKeyDown(KeyCode.A) && r.position.x > -1)
         {
             r.position = new Vector3(r.position.x - 2, r.position.y, r.position.z);
         }
