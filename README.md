@@ -19,6 +19,15 @@ Features
 Getting Started
 ---------------
 
+Contributors
+------------
+Emma Guo
+Zane Mogannam
+Annie Zhang
+Alena Chao
+Dhruv Gautam
+Anirudh Kotamraju
+
 
 
 
